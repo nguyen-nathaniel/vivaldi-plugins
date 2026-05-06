@@ -1,0 +1,39 @@
+/*
+ * zen-unloaded-tabs.css — Zen-like visuals for hibernated/discarded tabs
+ *
+ * .zen-unloaded is set by zen-unloaded-tabs.js. Pure-CSS fallbacks match common tooltip/title text.
+ * Scope: #tabs-container only (safe with Arc Peek).
+ */
+
+/* JS-driven */
+#tabs-container .tab-position.zen-unloaded .tab {
+  opacity: 0.52;
+  filter: grayscale(0.92) saturate(0.35);
+}
+
+#tabs-container .tab-position.zen-unloaded .tab.active {
+  opacity: 0.72;
+  filter: grayscale(0.55) saturate(0.55);
+}
+
+/* Tooltip/title fallbacks */
+#tabs-container .tab-position[title*="Hibernated"] .tab,
+#tabs-container .tab-position[title*="hibernated"] .tab,
+#tabs-container .tab[title*="Hibernated"],
+#tabs-container .tab[title*="hibernated"],
+#tabs-container .tab-wrapper[title*="Hibernated"] .tab,
+#tabs-container .tab-wrapper[title*="hibernated"] .tab,
+#tabs-container .tab-wrapper[title*="Ruhezustand"] .tab,
+#tabs-container .tab-wrapper[title*="Veille"] .tab,
+#tabs-container .tab-wrapper[title*="Sleeping"] .tab {
+  opacity: 0.52;
+  filter: grayscale(0.92) saturate(0.35);
+}
+
+/* Legacy / future Vivaldi classes */
+#tabs-container .tab.isdiscarded,
+#tabs-container .tab.is-discarded,
+#tabs-container .tab-position.is-discarded .tab {
+  opacity: 0.52;
+  filter: grayscale(0.92) saturate(0.35);
+}

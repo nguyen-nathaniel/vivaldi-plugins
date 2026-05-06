@@ -1,0 +1,13 @@
+.panel-group{
+   flex: none !important;
+   contain: initial !important;
+}
+#switch{
+   display:none;
+}
+#panels-container{
+   width: auto !important;
+}
+#header {
+  display: none;
+}
